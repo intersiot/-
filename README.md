@@ -1,2 +1,3 @@
 # portfolio
-Portfolio
+포트폴리오용 깃허브
+포폴은 계속 만들고 있는 중임.
