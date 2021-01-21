@@ -1,18 +1,20 @@
 @import "reset.css";
 
-/* common css */
 * {
-  /* font-family: 'Lora', serif; */
-  font-family: "Nanum Gothic", sans-serif;
-  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   /* background-size: contain; */
-  background-attachment: fixed;
-  animation: backgroundAni 5s infinite;
-  animation-direction: alternate;
+  /* background-attachment: fixed; */
+  /* animation: backgroundAni 5s infinite;
+  animation-direction: alternate; */
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-size: 1em; /* 1em = 16px */
+  color: #666666;
 }
 
 div,
@@ -28,40 +30,58 @@ nav {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999999;
+  /* background-color: rgba(0, 0, 0, 0.1); */
   display: block;
 }
 
-/* header nav */
-.nav {
-  height: 50px;
-}
-
-/* first visual section */
-.visual {
-  height: 800px;
-}
-
-.logo {
-  width: 80px;
-  height: 80px;
+header .logo {
+  width: 60px;
+  height: 60px;
   background-color: rgba(0, 0, 0, 0.1);
+  margin: 20px 0 0 50px;
   float: left;
-  margin: 25px 0 0 50px;
+  cursor: pointer;
 }
-.humbuger {
-  width: 80px;
-  height: 80px;
-  background-color: rgba(0, 0, 0, 0.1);
+
+header .humbuger_menu {
+  width: 60px;
+  height: 60px;
+  margin: 20px 50px 0 0;
   float: right;
-  margin: 25px 50px 0 0;
+  cursor: pointer;
+  border: 1px solid #cacaca;
+  border-radius: 15px;
 }
-.visual p {
+
+.humbuger_menu span {
+  color: #cacaca;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.humbuger_menu i {
+  transition: transform 1s;
+}
+
+.humbuger_menu:hover i {
+  transform: rotate(180deg);
+}
+
+/* first visual section */
+.visual {
+  /* height: 100vh; */
+}
+.visual p {
   text-align: center;
-  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* visual animation */
@@ -79,10 +99,105 @@ a {
   }
 }
 
+/* about section */
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 150px;
+}
+
+.skills,
+.edu,
+.works {
+  flex: 1;
+}
+
+.about ul {
+  margin-top: 20px;
+}
+
+.about .title {
+  color: #fc6a65;
+  letter-spacing: 4px;
+  font-size: 0.75em;
+  font-weight: 400;
+  font-variant: small-caps;
+}
+.skills .title::before,
+.edu .title::before,
+.works .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background-color: #fc6a65;
+  opacity: 40%;
+}
+.about .skills .title::before {
+  width: 85px;
+}
+.about .edu .title::before {
+  width: 102px;
+}
+.about .works .title::before {
+  width: 167px;
+}
+.about .subTitle,
+.about p {
+  color: #cacaca;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.about .sec {
+  margin-top: 25px;
+}
+
+.about .cont {
+  line-height: 26px;
+}
+
+.edu {
+  margin: 0 20px;
+}
+
+@media screen and (max-width: 1020px) {
+  .about {
+    flex-flow: row wrap;
+    padding: 50px 100px;
+  }
+  .skills,
+  .edu {
+    flex: 1;
+    margin: 0;
+  }
+  .edu {
+    margin-left: 20px;
+  }
+  .works {
+    flex: 100%;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .about {
+    flex-direction: column;
+    padding: 50px;
+  }
+  .edu {
+    margin: 50px 0 0 0;
+  }
+}
+
 /* work section */
 .work {
   width: 100%;
   background-color: white;
+  display: none;
 }
 
 /* card 부분 */
