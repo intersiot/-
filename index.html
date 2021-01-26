@@ -30,53 +30,37 @@
     <!-- title -->
     <title>Portfolio | Junior Developer</title>
 </head>
+
 <body>
     <header>
         <div class="logo">
             <!-- 로고부분 -->
+            <a href="index.html"></a>
+            <img src="/img/logo.png" alt="logo_image" />
         </div>
-        <div class="humbuger_menu">
-            <span>
-                <i id="humbuger_icon" class="fas fa-bars fa-2x"></i>
-            </span>
-            
-            <!-- 햄버거 메뉴 -->
-            <div class="home"></div>
-                <div class="about">
-                    <!-- 
-                        경력 기술
-                        스타트업 '이스트블루' 
-                        근무: 3개월
-                        업무: 웹 퍼블리셔
-                        인터넷 쇼핑몰 '베베나인'
-                        근무: 1년 5~6개월
-                        업무: 웹 디자이너, 간단한 코딩
-                        교육 기술
-                        웹 퍼블리셔 교육 6개월: 배운 스킬들 기입
-                        자바를 활용한 안드로이드 앱 개발 교육 6개월: 배운 스킬들 기입
-                        스킬 기술: 절대 과장하지 말자!
-                        html, css, js, python, java, kotlin
-                     -->
-                </div>
-                <div class="work"></div>
-                <div class="contact"></div>
+        <div class="hambuger">
+            <div class="bar first"></div>
+            <div class="bar second"></div>
+            <div class="bar third"></div>
         </div>
     </header>
     <!-- 메인으로 보여지는 섹션 -->
-    <section class="visual">
+    <section class="visual target">
         <p>여기다가 어쩌고 저쩌고 내용쓰자.</p>
     </section>
-    <!-- work 부분: 
-        1. 처음 만든 포폴 페이지(이건 들어갈 필요가 없어보임.)
-        2. 포폴 페이지에 들어갔던 프로젝트: 최대한 디자인한 것들 홈페이지랑, 모바일로 만들어서 추가하는 쪽으로.
-        3. 일하면서 만든 프로젝트(경력 사항에서 이러이러한 거 했다 식으로 하는 게 나을 거 같음.)
-            '씨서바 웹', '이혼전문법류회사 웹', '스노우피플 웹&앱', '회사 웹'
-            오픈마켓, 소셜커머스 썸네일&배너, 컨텐츠(디테일 페이지 등) 제작
-        4. 인강 들으면서 만들었던 거 발전 시켜서
-            스위터(CURD), 맛집(크롤링) - 공통점: 즐겨찾기 등록&삭제, DB사용
-        5. 클론 코딩 2, 인강 들으면서 한거 발전시켜서 2, 앱 2(롤켓팅이 메인, 나 혼자 만드는 앱1) 총 6개 보여주는 게 나을 거 같음.
-            유튜브, 인스타그램&카카오톡 같은 거 하는 게 좋을 거 같음.
-            클론 코딩도 웹1 앱1 로 하는 게 좋을 거 같다.
+    <!-- about 부분:
+        경력 기술
+        스타트업 '이스트블루' 
+        근무: 3개월
+        업무: 웹 퍼블리셔
+        인터넷 쇼핑몰 '베베나인'
+        근무: 1년 5~6개월
+        업무: 웹 디자이너, 간단한 코딩
+        교육 기술
+        웹 퍼블리셔 교육 6개월: 배운 스킬들 기입
+        자바를 활용한 안드로이드 앱 개발 교육 6개월: 배운 스킬들 기입
+        스킬 기술: 절대 과장하지 말자!
+        html, css, js, python, java, kotlin
     -->
     <section class="about">
         <div class="skills">
@@ -91,9 +75,11 @@
         <div class="edu">
             <div class="title">EDUCATION</div>
             <ul>
-                <div class="subTitle">2019 - 2020</div>
+                <div class="subTitle">2020 - 2021</div>
+                <span class="cont">스파르타 코딩클럽 웹개발 기초&플러스</span>
+                <div class="subTitle sec">2019 - 2020</div>
                 <span class="cont">자바를 활용한 안드로이드 개발자 과정</span>
-                <div class="subTitle sec">2016 - 2017</div>
+                <div class="subTitle thi">2016 - 2017</div>
                 <span class="cont">디지털컨버전스 UI/US 사물 인터넷: 웹표준 기반 스마트 UI/UX 디자인 양성과정</span>
             </ul>
         </div>
@@ -109,44 +95,56 @@
             </ul>
         </div>
     </section>
-
+    <!-- work 부분: 
+        1. 처음 만든 포폴 페이지(이건 들어갈 필요가 없어보임.)
+        2. 포폴 페이지에 들어갔던 프로젝트: 최대한 디자인한 것들 홈페이지랑, 모바일로 만들어서 추가하는 쪽으로.
+        3. 일하면서 만든 프로젝트(경력 사항에서 이러이러한 거 했다 식으로 하는 게 나을 거 같음.)
+            '씨서바 웹', '이혼전문법류회사 웹', '스노우피플 웹&앱', '회사 웹'
+            오픈마켓, 소셜커머스 썸네일&배너, 컨텐츠(디테일 페이지 등) 제작
+        4. 인강 들으면서 만들었던 거 발전 시켜서
+            스위터(CURD), 맛집(크롤링) - 공통점: 즐겨찾기 등록&삭제, DB사용
+        5. 클론 코딩 2, 인강 들으면서 한거 발전시켜서 2, 앱 2(롤켓팅이 메인, 나 혼자 만드는 앱1) 총 6개 보여주는 게 나을 거 같음.
+            유튜브, 인스타그램&카카오톡 같은 거 하는 게 좋을 거 같음.
+            클론 코딩도 웹1 앱1 로 하는 게 좋을 거 같다.
+    -->
     <section class="work">
-        
-        <div id="cards-box" class="card-columns">
-            <div class="card">
-                <img src="#" id="card-image" class="card-img-top" alt="#">
-                <div class="overlay"></div>
-                <div class="text">Project Name</div>
+        <div class="card">
+            <a href="#"></a>
+            <div class="img">
+                <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="work_1">
             </div>
-            <div class="card">
-                <img src="#" id="card-image" class="card-img-top" alt="#">
-                <div class="overlay"></div>
-                <div class="text">Project Name</div>
+            <div class="text">Project Name</div>
+        </div>
+        <div class="card">
+            <a href="#"></a>
+            <div class="img">
+                <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="work_1">
             </div>
-            <div class="card">
-                <img src="#" id="card-image" class="card-img-top" alt="#">
-                <div class="overlay"></div>
-                <div class="text">Project Name</div>
+            <div class="text">Project Name</div>
+        </div>
+        <div class="card">
+            <a href="#"></a>
+            <div class="img">
+                <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="work_1">
             </div>
-            <div class="card">
-                <img src="#" id="card-image" class="card-img-top" alt="#">
-                <div class="overlay"></div>
-                <div class="text">Project Name</div>
-            </div>
-            <div class="card">
-                <img src="#" id="card-image" class="card-img-top" alt="#">
-                <div class="overlay"></div>
-                <div class="text">Project Name</div>
-            </div>
-            <div class="card">
-                <img src="#" id="card-image" class="card-img-top" alt="#">
-                <div class="overlay"></div>
-                <div class="text">Project Name</div>
-            </div>
+            <div class="text">Project Name</div>
         </div>
     </section>
     <!-- contact 부분: 네이버 블로그, 깃허브 링크, 사람인&잡코리아 이력서 링크 -->
-    <section id="contact" class="contact"></section>
+    <section class="contact"></section>
+    <div class="btn-top">
+        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+    </div>
+    <!-- 햄버거 메뉴 -->
+    <div class="bg-wrap"></div>
+    <div class="drawer">
+        <div class="drawer-wrap">
+            <div class="dmenu">HOME</div>
+            <div class="dmenu">ABOUT</div>
+            <div class="dmenu">WORK</div>
+            <div class="dmenu">CONTACT</div>
+        </div>
+    </div>
     <!-- JavaScript import -->
     <script src="js/index.js"></script>
 </body>
